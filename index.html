@@ -33,28 +33,28 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var covid_count = 0;
+        var noneCovid_count = 0;
 	var total = 4;
 	var docMod = document.lastModified
 	alert("This file las modified " + docMod);
 	console.log("This file last modified " + docMod);
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function covidAdd(){
+            covid_count = covid_count + 1;
+		alert(covid_count);
         }
 
         function coldAdd(){
-            cold_count = cold_count + 1;
-		alert(cold_count);
+            noneCovid_count = noneCovid_count + 1;
+		alert(noneCovid_count);
 	}
 	function results(){
-		var count = allergy_count + cold_count;
-		var allergyPercent = (allergy_count/4) * 100;
-		var coldPercent = (cold_count/4) * 100;
+		var count = covid_count + cold_count;
+		var allergyPercent = (covid_count/4) * 100;
+		var coldPercent = (noneCovid_count/4) * 100;
 		var resultText = document. getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+		resultText.innerHTML = "Probability it is covid-19 =" + covidPercent + "%" + "<br> Probability it is not covid =" + noneCovidPercent + "%";
 		
 	}
 	
@@ -84,18 +84,18 @@ blah, blah, blah, blah
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+<div id="header" class="w3-container w3-flat-blue">
+	<h1>Covid?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Do you think you might have covid-19, and should you go into work today. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-red w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION. Especially covid-19.</p>
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -103,9 +103,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes feeling watery or itchy?</p>    
+        <p>Have you had any covid symptoms in the past few days that may include fever, fatigue, headache, as well as coughing?</p>    
     	</div> 
-	<a href="#two" class="w3-btn w3-black" onclick="allergyAdd();" > Yes </a> <a href="#two" onclick="coldAdd();" class="w3-btn w3-red"> NO </a>
+	<a href="#two" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#two" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -115,9 +115,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a fever?</p>    
+        <p>Did you by any chance need to use medicine to reduce a fever that you might have had in the past few days?</p>    
     	</div> 
-	<a href="#three" class="w3-btn w3-black" onclick="coldAdd();" > Yes </a> <a href="#three" onclick="allergyAdd();" class="w3-btn w3-red"> NO </a>
+	<a href="#three" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#three" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -127,9 +127,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Do you have a sore throat?</p>    
+        <p>Did you have any close contact within the last two week with someone who may have come out positive with covid-19?</p>    
     	</div> 
-	<a href="#four" class="w3-btn w3-black" onclick="coldAdd();" > Yes </a> <a href="#four" onclick="allergyAdd();" class="w3-btn w3-red"> NO </a>
+	<a href="#four" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#four" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -139,9 +139,21 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your symptoms seasonal or chronic?</p>    
+        <p>Do you currently have a fever?</p>    
     	</div> 
-	<a href="#final" class="w3-btn w3-black" onclick="allergyAdd();" > Yes </a> <a href="#final" onclick="coldAdd();" class="w3-btn w3-red"> NO </a>
+	<a href="#five" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#five" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+	
+</div>
+	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-red">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Did you by any chance get tested positive for Covid-19?</p>
+	</div>
+	a href="#fianl" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#final" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -158,7 +170,7 @@ blah, blah, blah, blah
 
 </div>
 		
-<footer class="w3-bottom w3-container w3-flat-carrot">
+<footer class="w3-bottom w3-container w3-flat-blue">
 	<p>DIY!</p>
 </footer>
 
