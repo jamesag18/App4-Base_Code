@@ -51,8 +51,8 @@ blah, blah, blah, blah
 	}
 	function results(){
 		var count = covid_count + noneCovid_count;
-		var allergyPercent = (covid_count/4) * 100;
-		var coldPercent = (noneCovid_count/4) * 100;
+		var covidPercent = (covid_count/4) * 100;
+		var noneCovidPercent = (noneCovid_count/4) * 100;
 		var resultText = document. getElementById("results");
 		resultText.innerHTML = "Probability it is covid-19 =" + covidPercent + "%" + "<br> Probability it is not covid =" + noneCovidPercent + "%";
 		
