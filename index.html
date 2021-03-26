@@ -57,6 +57,7 @@ blah, blah, blah, blah
 		resultText.innerHTML = "Probability it is covid-19 =" + covidPercent + "%" + "<br> Probability it is not covid =" + noneCovidPercent + "%";
 		
 	}
+	//These functions will help with counting and storing the results from the responses and will generate them in the results page.
 	
 	
   </script>
@@ -74,7 +75,7 @@ blah, blah, blah, blah
     left: -100vw;
     overflow-y: auto;
     z-index: 0;
-    background-color: hsl(0,0%,100%);
+    background-color: hsl(0,5%,100%);
 }
    img, object{
 	max-height: 90%;
@@ -101,7 +102,7 @@ blah, blah, blah, blah
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION. Especially covid-19.</p>
 	<img src="CoronaVirusHeader-Final-3.jpg" alt="Covid-19 Header">
-
+<!-- This page is the start of the app, it consist of the title and a sort of prompt of reason for using the app. There is also an image placed under the description of the app. -->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -172,10 +173,10 @@ blah, blah, blah, blah
 		<p id="results"></p>
 	
 	</div>
-
+<!-- This portion of the app will generate the results from the app and determine whether the patient is at high risk of having covid. -->
 </div>
 		
-<footer class="w3-bottom w3-container w3-flat-blue">
+<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
