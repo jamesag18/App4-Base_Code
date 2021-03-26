@@ -76,6 +76,10 @@ blah, blah, blah, blah
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
+   img, object{
+	max-height: 90%;
+	max-width: 90%;
+}
 
   .page:target {
     left: 0vw;
@@ -84,7 +88,7 @@ blah, blah, blah, blah
 </style>
 
 <body>
-<div id="header" class="w3-container w3-green-light">
+<div id="header" class="w3-container w3-flat-carrot">
 	<h1>Covid?</h1>
 </div>
 	
@@ -102,10 +106,10 @@ blah, blah, blah, blah
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Have you had any covid symptoms in the past few days that may include fever, fatigue, headache, as well as coughing?</p>    
+    		<div id="content" class="w3-container">
+     		   <p>Have you had any covid symptoms in the past few days that may include fever, fatigue, headache, as well as coughing?</p>    
     	</div> 
-	<a href="#two" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#two" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+		<a href="#two" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#two" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -114,10 +118,10 @@ blah, blah, blah, blah
 		<h1>Question 2</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Did you by any chance need to use medicine to reduce a fever that you might have had in the past few days?</p>    
+    		<div id="content" class="w3-container">
+      			  <p>Did you by any chance need to use medicine to reduce a fever that you might have had in the past few days?</p>    
     	</div> 
-	<a href="#three" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#three" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+		<a href="#three" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#three" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -126,10 +130,10 @@ blah, blah, blah, blah
 		<h1>Question 3</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Did you have any close contact within the last two week with someone who may have come out positive with covid-19?</p>    
+    		<div id="content" class="w3-container">
+       			 <p>Did you have any close contact within the last two week with someone who may have come out positive with covid-19?</p>    
     	</div> 
-	<a href="#four" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#four" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+		<a href="#four" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#four" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -138,10 +142,10 @@ blah, blah, blah, blah
 		<h1>Question 4</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Do you currently have a fever?</p>    
+    		<div id="content" class="w3-container">
+      		  <p>Do you currently have a fever?</p>    
     	</div> 
-	<a href="#five" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#five" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+		<a href="#five" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#five" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 	
@@ -150,10 +154,10 @@ blah, blah, blah, blah
 		<h1>Question 5</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-		<p>Did you by any chance get tested positive for Covid-19?</p>
+		<div id="content" class="w3-container">
+			<p>Did you by any chance get tested positive for Covid-19?</p>
 	</div>
-	<a href="#final" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#final" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
+		<a href="#final" class="w3-btn w3-black" onclick="covidAdd();" > Yes </a> <a href="#final" onclick="noneCovidAdd();" class="w3-btn w3-red"> NO </a>
 	
 </div>
 
@@ -162,7 +166,7 @@ blah, blah, blah, blah
 		<h1>Results!!!</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    		<div id="content" class="w3-container">
 		<a onclick="results();" class="w3-btn w3-red"> Press For Results!!!</a>
 		<p id="results"></p>
 	
